@@ -22,4 +22,22 @@ let findLargestNumber = [myNumbers];
               if (myNumbers[i] > largest) { 
                   largest = myNumbers[i]; // Update the largest number if a smaller number is found 
               } } console.log(largest); // Return the largest number found 
+             
               
+let sum = 0;
+    for (let i = 0; i < myNumbers.length; i++) {
+                  sum += myNumbers[i];
+              }
+                  let average = sum / myNumbers.length;
+              console.log(average);  
+   
+              function render() {
+                // Call the created functions
+                findSmallestNumber();
+                findLargestNumber();
+                average();
+            }
+            
+            submissionBtn.addEventListener("click", function () {
+                render();
+            });
